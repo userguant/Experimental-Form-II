@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCAD University Research Talks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="confetti-container" id="confetti"></div>
+
+    <div id="welcome">
+        <h1 id="welcomeTitle">Welcome!</h1>
+        <p id="welcomeSubtitle" class="subtitle">to OCAD University Research Talks</p>
+       
+        <div class="input-wrapper">
+            <input type="text" id="nameInput" placeholder="Type your name..." autocomplete="off" autofocus>
+        </div>
+        <p class="press-enter">Press Enter to begin</p>
+    </div>
+
+    <div id="info-page">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+        <div class="greeting">
+            <h2 id="greetingH2">Hello, <span id="userName"></span>!</h2>
+            <p id="greetingP">Join us for fascinating research talks with Faculty of Arts & Science!</p>
+        </div>
+        
+        <div class="info-section">
+            <div class="info-title-container">
+                <h2 class="info-title" id="infoTitle">INFORMATION</h2>
+                <button class="add-to-calendar-btn" onclick="addToCalendar()">
+                    📅 Add to Calendar
+                </button>
+            </div>
+            <div class="details">
+                <p><strong>Main Building & Rosalie Sharp Centre for Design (MCA)</strong></p>
+                <p>100 McCaul Street, Room 543</p>
+                <p><span style="color:#ff4d6d">March 24, 2026</span> • 3:30 – 4:30 p.m.</p>
+                <p>Department: Faculty of Arts & Science</p>
+                <p>Cost: <span style="color:#ff4d6d">Free</span></p>
+            </div>
+        </div>
+
+        <div class="speakers-header" id="speakersHeader">
+            Research Talks
+            <span class="playful-arrow">→</span>
+        </div>
+        <div class="speaker-names" id="speakerNames" style="display: none;"></div>
+        <div class="speaker-details-container" id="detailsContainer"></div>
+
+        <div class="rsvp-section">
+            <h2 class="rsvp-title">Reserve Your Spot</h2>
+            <p class="rsvp-subtitle">Enter your email and we'll send you event reminders and more information</p>
+            
+            <div class="email-form">
+                <input type="email" id="emailInput" class="email-input" placeholder="your@email.com" autocomplete="off">
+                <button class="rsvp-btn" onclick="submitRSVP()">Reserve My Spot</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="success-overlay">
+        <h1>OCAD looks forward to meeting you</h1>
+        <p>See you on March 24th!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
